@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Airport Arrival Guide - Welcome to Canada!</title>
+    <style>
+        body {
+            font-family: system-ui, -apple-system, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fce7f3; /* Pastel pink background */
+            background-image: radial-gradient(circle at 50% 50%, #fce7f3 0%, #f5d0fe 100%);
+        }
+        .container {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+        }
+        .step {
+            margin-bottom: 30px;
+            padding: 25px;
+            border-radius: 15px;
+            background-color: white;
+            border: 3px solid;
+            transition: transform 0.2s;
+        }
+        .step:hover {
+            transform: translateY(-5px);
+        }
+        .step:nth-child(1) {
+            border-color: #fbcfe8; /* Pastel pink */
+        }
+        .step:nth-child(2) {
+            border-color: #bfdbfe; /* Pastel blue */
+        }
+        .step:nth-child(3) {
+            border-color: #a7f3d0; /* Pastel green */
+        }
+        h1 {
+            color: #be185d;
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 2.5em;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+        h2 {
+            color: #6d28d9;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .important {
+            background-color: #ffe4e6;
+            border: 2px dashed #fda4af;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 12px;
+            font-weight: 500;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 12px;
+            position: relative;
+        }
+        li::marker {
+            color: #be185d;
+        }
+        .emoji {
+            font-size: 1.5em;
+            margin-right: 8px;
+        }
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-5px); }
+            100% { transform: translateY(0px); }
+        }
+        .welcome-emoji {
+            font-size: 2.5em;
+            display: block;
+            text-align: center;
+            margin: 20px 0;
+            animation: float 3s ease-in-out infinite;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <span class="welcome-emoji">✈️ 🍁</span>
+        <h1>Welcome to Canada!</h1>
+
+        <div class="step">
+            <h2><span class="emoji">📋</span>Study Permit Collection</h2>
+            <div class="important">
+                🚨 Super Important: Don't forget to collect your study permit before leaving!
+            </div>
+            <ul>
+                <li>Head to Immigration after getting your bags</li>
+                <li>Bring these must-have documents:
+                    <ul>
+                        <li>✈️ Passport</li>
+                        <li>📜 Letter of Introduction</li>
+                        <li>📚 School Acceptance Letter</li>
+                        <li>💰 Proof of funds</li>
+                    </ul>
+                </li>
+                <li>The friendly immigration officer will print your permit</li>
+            </ul>
+        </div>
+
+        <div class="step">
+            <h2><span class="emoji">🆔</span>Get Your SIN Number</h2>
+            <ul>
+                <li>Find the Service Canada desk (near where you got your bags)</li>
+                <li>Bring along:
+                    <ul>
+                        <li>🛂 Passport</li>
+                        <li>📄 Your fresh study permit</li>
+                    </ul>
+                </li>
+                <li>It's totally free!</li>
+                <li>Keep your SIN number super safe - it's like a secret code for work!</li>
+            </ul>
+        </div>
+
+        <div class="step">
+            <h2><span class="emoji">📱</span>Phone Plans & SIM Cards</h2>
+            <ul>
+                <li>Cool carriers you can choose from:
+                    <ul>
+                        <li>🔵 Bell</li>
+                        <li>❤️ Rogers</li>
+                        <li>💜 Telus</li>
+                        <li>💙 Freedom Mobile</li>
+                    </ul>
+                </li>
+                <li>What you usually get:
+                    <ul>
+                        <li>🌐 Lots of data (10GB+)</li>
+                        <li>📞 Call anyone in Canada</li>
+                        <li>💬 Text your friends back home</li>
+                    </ul>
+                </li>
+                <li>Pro tip: Sometimes better deals await outside the airport! 💡</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
