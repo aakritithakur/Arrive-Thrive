@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Welcome to Arrive & Thrive</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family :'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(180deg, #f5e6af 0%, #ffea96 100%);
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        .airport-section {
+            height: 40vh;
+            background: #dcedff;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .airport {
+            width: 100%;
+            height: 60px;
+            background: #333;
+            position: absolute;
+            bottom: 0;
+        }
+
+        .runway {
+            width: 80%;
+            height: 100%;
+            margin: 0 auto;
+            background: #333;
+            position: relative;
+        }
+
+        .runway::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            height: 6px;
+            background: repeating-linear-gradient(
+                90deg,
+                #fff,
+                #fff 20px,
+                transparent 20px,
+                transparent 40px
+            );
+        }
+
+        .plane {
+            position: absolute;
+            font-size: 40px;
+            animation: landPlane 5s forwards ease-in-out;
+        }
+
+        .plane img {
+         width: 200px; 
+         height: auto;
+        }
+
+        @keyframes landPlane {
+        0% {
+        top: -10%;     
+        left: -10%;    
+        transform: rotate(0deg); 
+        }
+        50% {
+        top: 62%;  
+        left: 30%;      
+        transform: rotate(0deg);   
+        }
+        100% {
+        top: 62%;
+        left: 80%; 
+        transform: rotate(0deg); 
+            }
+        }
+
+        .journey-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+            position: relative;
+        }
+
+        .journey-path {
+            width: 6px;
+            background: #7e3e09;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            height: calc(100% - 18rem);
+            z-index: 1;
+        }
+
+        .checkpoint {
+            position: relative;
+            margin: 3rem 0;
+            min-height: 120px;
+            display: flex;
+            align-items: center;
+            z-index: 2;
+        }
+
+        .checkpoint:nth-child(odd) {
+            flex-direction: row;
+        }
+
+        .checkpoint:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+
+        .checkpoint-content {
+            width: 45%;
+            background: white;
+            padding: 1.5rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .checkpoint-content:hover {
+            transform: translateY(-5px);
+        }
+
+        .checkpoint-icon {
+            width: 60px;
+            height: 60px;
+            background: white;
+            border: 4px solid #7e3e09;
+            border-radius: 50%;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            z-index: 3;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            
+        }
+
+        .checkpoint-icon img {
+           width: 80%;  
+           height: 80%; 
+           object-fit: cover; 
+           border-radius: 50%; 
+        }
+
+
+        .checkpoint-icon:hover {
+            background: #e7a92d;
+            transform: translateX(-50%) scale(1.1);
+        }
+
+        .home-destination {
+            text-align: center;
+            padding: 2rem;
+            margin-top: 2rem;
+        }
+
+        .home-icon {
+            width: 150px; 
+            height: 150px;
+            border: 4px solid #7e3e09; 
+            border-radius: 50%; 
+            overflow: hidden; 
+            display: inline-block;
+            font-size: 60px;
+            animation: pulse 2s infinite;
+        }
+
+        .home-icon img {
+          width: 100%; 
+          height: 100%;
+         object-fit: cover;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+
+        h2 {
+            color: #7e3e09;
+            margin-bottom: 0.5rem;
+        }
+
+        .welcome-text {
+            text-align: center;
+            padding: 2rem;
+            color: #000000;
+            font-size: 16px;
+        }
+
+        .welcome-text h1 {
+            font-size: 3.0rem;
+            color: #7e3e09;
+            margin-bottom: 1rem;
+        }
+
+        .nav-menu {
+            position: fixed;
+            top: 0;
+            right: 0;
+            padding: 1rem;
+            z-index: 1000;
+        }
+
+    
+    </style>
+</head>
+<body>
+
+    <div class="airport-section">
+        <div class="plane">
+            <img src="https://www.wannapik.com/media/W1siZiIsIjIwMTYvMDgvMjIvN3FlbHBza3U3cl9kMDB1cnJ6NV90cmFuMDE5OC5wbmciXV0/b9b8a3b215d67221/d00urrz5_tran0198.png">
+        </div>
+        <div class="airport">
+            <div class="runway"></div>
+        </div>
+    </div>
+
+    <div class="welcome-text">
+        <h1>Welcome to Arrive&Thrive!</h1>
+        <p> We help you Thrive as soon as you Arrive!</p>
+    </div>
+
+    <div class="journey-container">
+        <div class="journey-path"></div>
+        
+        <div class="checkpoint">
+            <div class="checkpoint-content" onclick="location.href='airport-guide.html'">
+                <h2>At The Airport </h2>
+                <p>Clear immigration, collect your SIN, choose the most suitable Canadian SIM card, and arrange for transportation to your new home!</p>
+            </div>
+            <div class="checkpoint-icon">
+                <img src="https://media.istockphoto.com/id/1096120852/vector/air-traffic-flat-style-vector-illustration-of-the-airliners-at-sunset.jpg?s=612x612&w=0&k=20&c=DTECwfX_8EVXBWmw8n2k9WgjVFjoT7ZqpYkFCQDRIvo=">
+            </div>
+        </div>
+
+        <div class="checkpoint">
+            <div class="checkpoint-content" onclick="location.href='documentation.html'">
+                <h2>From The Airport</h2>
+                <p>Purchase a PRESTO card to use public transit, get familiar with Canadian emergency contacts, and pick up some food after your long journey!</p>
+            </div>
+            <div class="checkpoint-icon">
+                <img src="https://media.istockphoto.com/id/1413747575/vector/traveling-people-outside-of-an-airport-vector-illustration.jpg?s=612x612&w=0&k=20&c=mBuWX4SzRRmT3yNQeea-Q3yLKc_J4hqJN5MjrFd5KRU=">
+            </div>
+        </div>
+
+        <div class="checkpoint">
+            <div class="checkpoint-content" onclick="location.href='transportation.html'">
+                <h2> Almost There</h2>
+                <p>Get prepared for life in Canada: learn about cost-effective and conveniently-located grocery stores, food banks, and pharmacies. Set up a Canadian bank account. Understand your student medical insurance and find a family doctor. Lastly, learn about local resources and international student communities to help combat homesickness.
+                </p>
+            </div>
+            <div class="checkpoint-icon">
+                <img src="https://thumbs.dreamstime.com/b/shopping-basket-full-fresh-groceries-shopping-basket-full-fresh-groceries-vector-illustration-healthy-organic-natural-food-175833487.jpg">
+            </div>
+        </div>
+
+        <div class="home-destination">
+            <div class="home-icon">
+                <img src="https://img.freepik.com/premium-vector/future-home-vector-illustration-flat_953432-933.jpg">
+            </div>
+            <h2>Welcome Home!</h2>
+        </div>
+    </div>
+</body>
+</html>

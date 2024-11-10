@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1. At the Airport</title>
+    <style>
+        body {
+            font-family: system-ui, -apple-system, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #b1d1fa; 
+            background-image: radial-gradient(circle at 50% 50%, #a9d5fa 0%, #b3d3ff 100%);
+        }
+        .container {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 8px 32px rgba(139, 80, 7, 0.1);
+        }
+        .step {
+            margin-bottom: 30px;
+            padding: 25px;
+            border-radius: 15px;
+            background-color: white;
+            border: 3px solid #b96a0f;
+            transition: transform 0.2s;
+        }
+        .step:hover {
+            transform: translateY(-5px);
+        }
+        .step:nth-child(1) {
+            border-color: #b96a0f; 
+        }
+        .step:nth-child(2) {
+            border-color: #b96a0f; 
+        }
+        .step:nth-child(3) {
+            border-color: #b96a0f; 
+        }
+        h1 {
+            color: #934511;
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 2.5em;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+        h2 {
+            color: #d97b28;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .important {
+            background-color: #ffe4e6;
+            border: 2px dashed #fda4af;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 12px;
+            font-weight: 500;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 12px;
+            position: relative;
+        }
+        li::marker {
+            color: #be5518;
+        }
+        .emoji {
+            font-size: 1.5em;
+            margin-right: 8px;
+        }
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-5px); }
+            100% { transform: translateY(0px); }
+        }
+        .welcome-emoji {
+            font-size: 2.5em;
+            display: block;
+            text-align: center;
+            margin: 20px 0;
+            animation: float 3s ease-in-out infinite;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <span class="welcome-emoji"></span>
+        <h1>1. At The Airport</h1>
+        <div class="step">
+            <h2><span class="emoji">📋</span>Study Permit & SIN Collection</h2>
+            <div class="important">
+                🚨 Super Important: Don't forget to collect your study permit before crossing the customs!
+            </div>
+            <ul>
+                <li>Congratulations, you’ve just stepped off the plane and are taking your first steps as a Canadian university student! Be careful, however, as there are a couple important steps you must follow while you’re still in the airport.
+
+                    <ul>
+                        <li>First, proceed to the border agents with all your relevant travel documents prepared. This may include your letter of introduction, your passport, and a copy of your letter of acceptance to university. Ensure that you receive your student permit at this point, as it will be required to pick up your SIN later. Do not be afraid to ask officers for guidance if you are ever confused; they are experienced and will be qualified to answer any questions you may have.
+                        </li>
+                        <li>Next, make your way to the Service Canada booth inside the airport. Here, you will have an opportunity to pick up your SIN from counter 7 (right after baggage collection) – but do not worry; if you do not pick it up at this point, it is still possible to obtain it later at an external Service Canada centre near you.
+                        </li>
+                      
+                        
+                    </ul>
+                </li>
+                
+            </ul>
+        </div>
+
+        <div class="step">
+            <h2><span class="emoji">📱</span>Set up your Canadian mobile phone coverage plan, and purchase a SIM card.</h2>
+            <ul>
+                <li>Although you could also set up your mobile phone later on, it is always important to have access to communicate with anybody if you ever run into a problem. If you have not already arranged for your Canadian SIM card, you are able to purchase one onsite at the many mobile phone booths scattered around the airport.
+                
+                <li>With so many options available, it can be difficult to decide which phone company offers the best plan for you. Items to consider include the cost of your plan, the quality of service, and the amount of monthly data usage you are provided. For most students, our recommendations for a suitable and cost-effective plan are as follows:</li>
+                <li>
+                    <ul>
+                        <li>Virgin Plus:
+                            Offers 20GB of data, unlimited talk & text at $44/mo
+                            </li>
+                        <li>Koodo:
+                            Offers 10GB of 4G data, unlimited talk & text at $34/mo 
+                            </li>
+                    </ul>
+                </li>Pro tip: better deals await outside the airport! 💡</li>
+            </ul>
+        </div>
+
+        <div class="step">
+            <h2><span class="emoji">🏠</span>Transportation Home</h2>
+            <ul>
+                <li>Lastly, it is time to head over to your new home! Don’t be afraid to grab a meal or snack on the way. There are a number of options for York University Keele Campus students to reach their home if it is near campus:
+
+                    <ul>
+                        <li>Public transit: the cheapest way to make your way to campus is by using the publicly available Toronto Transit Commission (TTC). The TTC is a network of subways, busses, and streetcars, and will be your most accessible mode of transportation during your stay in Toronto. </li>
+                        <li>To reach campus, go to Terminal 1 in Pearson Airport and take the 40 bus from Pearson Airport station to the Hwy 407 Bus Terminal Station. Then, ride the Line 1 subway from Highway 407 station to Pioneer Village Station. All in all, this trip should take approximately half an hour.
+                        </li>
+                        <li>You can also choose to pay for a taxi to bring you directly to your home. Although this will cost more than the TTC, it is a low-stress and direct option to reach your destination, and allows you to bring your luggage with your more easily.
+                        </li>
+                        <li>Lastly, you can also consider using a ride-share app such as Uber. 
+                        </li>
+                    </ul>
+                </li>  
+                <li>Note: Uber does not allow you to create an account without a Canadian phone number – see the previous step for tips to secure your Canadian mobile coverage!</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
